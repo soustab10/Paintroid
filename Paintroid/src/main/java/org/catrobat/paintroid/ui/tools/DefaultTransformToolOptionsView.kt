@@ -34,7 +34,7 @@ import org.catrobat.paintroid.R
 import org.catrobat.paintroid.tools.options.TransformToolOptionsView
 import java.text.NumberFormat
 import java.text.ParseException
-import java.util.Locale
+import java.util.*
 
 private const val HUNDRED = 100
 
@@ -73,6 +73,10 @@ class DefaultTransformToolOptionsView(rootView: ViewGroup) : TransformToolOption
         optionsView.findViewById<View>(R.id.pocketpaint_transform_auto_crop_btn)
             .setOnClickListener {
                 callback?.autoCropClicked()
+            }
+        optionsView.findViewById<View>(R.id.pocketpaint_transform_set_center_btn)
+            .setOnClickListener {
+                callback?.setCenterClicked()
             }
         optionsView.findViewById<View>(R.id.pocketpaint_transform_rotate_left_btn)
             .setOnClickListener {
